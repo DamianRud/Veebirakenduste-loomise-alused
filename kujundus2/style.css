@@ -1,0 +1,398 @@
+/* --- Imports & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* --- Global Reset & Variables --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #030712;
+    --bg-card: rgba(15, 23, 42, 0.75);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --radius-lg: 24px;
+    --radius-sm: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 280px; /* Сайдбар слева */
+    overflow-x: hidden;
+}
+
+/* Эффект футуристичного фонового свечения (Ambient Glow) на всех страницах */
+body::before {
+    content: '';
+    position: fixed;
+    top: -20vh;
+    left: 20vw;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(121, 40, 202, 0.12) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -10vh;
+    right: 10vw;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- Atmospheric Header --- */
+header {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(3, 7, 18, 0.9) 100%);
+    padding: 4rem 2rem 3rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-glass);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    /* Неоновая подсветка заголовка */
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.3), 0 0 40px rgba(121, 40, 202, 0.2);
+}
+
+/* --- Navigation: Vertical Neon Sidebar --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    z-index: 1000;
+    background: rgba(8, 12, 22, 0.92);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-right: 1px solid var(--border-glass);
+    box-shadow: 15px 0 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#menu-toggle,
+.menu-btn {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 6px 0;
+    width: 100%;
+}
+
+/* Неоновый переливающийся цвет для меню */
+@keyframes neonGlow {
+    0% {
+        color: #ff007f;
+        text-shadow: 0 0 10px rgba(255, 0, 127, 0.9), 0 0 25px rgba(255, 0, 127, 0.5);
+    }
+    33% {
+        color: #00f0ff;
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.9), 0 0 25px rgba(0, 240, 255, 0.5);
+    }
+    66% {
+        color: #a855f7;
+        text-shadow: 0 0 10px rgba(168, 85, 247, 0.9), 0 0 25px rgba(168, 85, 247, 0.5);
+    }
+    100% {
+        color: #ff007f;
+        text-shadow: 0 0 10px rgba(255, 0, 127, 0.9), 0 0 25px rgba(255, 0, 127, 0.5);
+    }
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 18px 28px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: transparent;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+    animation: neonGlow 6s infinite linear;
+    position: relative;
+    text-align: left;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(180deg, #ff007f, #00f0ff, #a855f7);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px #00f0ff;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateX(8px);
+}
+
+nav ul li a:hover::before {
+    transform: scaleY(1);
+}
+
+/* --- Main Layout Grid --- */
+main {
+    max-width: 1200px;
+    width: calc(100% - 4rem);
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+/* --- Universal Bento Cards (с неоновой подсветкой при наведении) --- */
+section[id^="kast"] {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Интенсивное неоновое свечение карточки при наведении */
+section[id^="kast"]:hover {
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+/* Цветные верхние неоновые акценты */
+section#kast1 { border-top: 4px solid #3498db; box-shadow: inset 0 3px 10px rgba(52, 152, 219, 0.2); }
+section#kast2 { border-top: 4px solid #3498db; box-shadow: inset 0 3px 10px rgba(52, 152, 219, 0.2); }
+section#kast3 { border-top: 4px solid #2ecc71; box-shadow: inset 0 3px 10px rgba(46, 204, 113, 0.2); }
+section#kast4 { border-top: 4px solid #f1c40f; box-shadow: inset 0 3px 10px rgba(241, 196, 15, 0.2); }
+section#kast5 { border-top: 4px solid #9b59b6; box-shadow: inset 0 3px 10px rgba(155, 89, 182, 0.2); }
+section#kast6 { border-top: 4px solid #e67e22; box-shadow: inset 0 3px 10px rgba(230, 126, 34, 0.2); }
+section#kast7 { border-top: 4px solid #1abc9c; box-shadow: inset 0 3px 10px rgba(26, 188, 156, 0.2); }
+
+section[id^="kast"] h2 {
+    font-size: 1.6rem;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+section[id^="kast"] p,
+section[id^="kast"] span {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+/* Неоновые ссылки внутри карточек (все страницы) */
+section[id^="kast"] a {
+    display: inline-block;
+    color: #00f0ff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 1.5rem;
+    margin-top: 0.8rem;
+    transition: all 0.3s ease;
+    animation: none;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+section[id^="kast"] a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.9), 0 0 30px rgba(0, 240, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Картинки внутри карточек с неоновой рамкой */
+section[id^="kast"] img,
+#suurkast img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+section[id^="kast"] img:hover {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+/* --- Media Page Layout (#suurkast container) --- */
+#suurkast {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+    width: 100%;
+    margin: 0;
+}
+
+#suurkast section {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+#suurkast section:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(168, 85, 247, 0.15);
+}
+
+/* Галерея картинок с неоновым зумом */
+#pildigalerii {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+#pildigalerii img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+#pildigalerii img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+    z-index: 10;
+}
+
+/* Iframe элементы (видео, карты, Spotify) с подсветкой */
+iframe {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#video iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 3.5rem 2rem;
+    background: #010308;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border-glass);
+    letter-spacing: 0.05em;
+    margin-top: auto;
+    margin-left: 280px;
+    backdrop-filter: blur(10px);
+}
+
+/* --- Адаптивность для мобильных телефонов --- */
+@media (max-width: 850px) {
+    nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-glass);
+    }
+    body {
+        padding-left: 0;
+    }
+    footer {
+        margin-left: 0;
+    }
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+    nav ul li {
+        width: auto;
+        margin: 4px;
+    }
+    nav ul li a {
+        text-align: center;
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+    nav ul li a::before {
+        left: 0;
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        transform: scaleX(0);
+    }
+    nav ul li a:hover {
+        transform: translateY(-3px);
+    }
+    nav ul li a:hover::before {
+        transform: scaleX(1);
+    }
+}
