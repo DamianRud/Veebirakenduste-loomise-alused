@@ -10,7 +10,7 @@
 <h2>Lihtne tabel</h2>
 <table>
   <tr>
-    <td>A</td>
+    <td class="nimi">A</td>
     <td>B</td>
   </tr>
   <tr>
@@ -18,5 +18,26 @@
     <td>D</td>
   </tr>
 </table>
+<h2>Tabel kus on ühendatud lahtrid</h2>
+<table id="keeruline1">
+  <tr>
+    <td colspan="2" class="nimi">A</td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>D</td>
+  </tr>
+</table>
+<h2>Veel üks tabel kus on ühendatud lahtrid</h2>
+<table id="keeruline2">
+  <tr>
+    <td rowspan="2" class="nimi">A</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>D</td>
+  </tr>
+</table>
+
 </body>
 </html>

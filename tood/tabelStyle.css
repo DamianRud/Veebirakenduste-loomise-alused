@@ -8,3 +8,34 @@ td{
     border: 1px solid black;
 }
 
+
+
+table#keeruline1 {
+    border: 1px solid red;
+    width: 10%;
+    height: 200px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+table#keeruline2 {
+    border: 1px solid red;
+    width: 10%;
+    height: 200px;
+    text-align: center;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+
+
+table#keeruline2 td{
+    vertical-align: top;
+    border: 1px solid red;
+    background-color: hotpink;
+
+}
+
+.nimi {
+    background-color: mediumpurple;
+}
