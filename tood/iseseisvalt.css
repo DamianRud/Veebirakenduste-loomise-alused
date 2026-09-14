@@ -1,0 +1,43 @@
+table {
+    width: 600px;
+    border-collapse: collapse;
+    background-color: lightblue;
+}
+
+td {
+    border: 5px solid black;
+    height: 50px;
+    text-align: center;
+}
+
+
+
+table tr:nth-child(1) td:nth-child(1) { background-color: #ffcccc; }
+table tr:nth-child(1) td:nth-child(2) { background-color: #ffe5cc; }
+table tr:nth-child(1) td:nth-child(3) { background-color: #ffffcc; }
+
+
+table tr:nth-child(2) td:nth-child(1) { background-color: #e5ffcc; }
+table tr:nth-child(2) td:nth-child(2) { background-color: #ccffcc; }
+table tr:nth-child(2) td:nth-child(3) { background-color: #ccffe5; }
+table tr:nth-child(2) td:nth-child(4) { background-color: #ccffff; }
+
+
+table tr:nth-child(3) td:nth-child(1) { background-color: #cce5ff; }
+table tr:nth-child(3) td:nth-child(2) { background-color: #ccccff; }
+table tr:nth-child(3) td:nth-child(3) { background-color: #e5ccff; }
+table tr:nth-child(3) td:nth-child(4) { background-color: #ffccff; }
+
+
+table tr:nth-child(4) td:nth-child(1) { background-color: #ffcce5; }
+table tr:nth-child(4) td:nth-child(2) { background-color: #f2f2f2; }
+
+
+table tr:nth-child(5) td:nth-child(1) { background-color: #e6e6e6; }
+table tr:nth-child(5) td:nth-child(2) { background-color: #d9d9d9; }
+
+table tr:nth-child(6) td:nth-child(1) { background-color: #cccccc; }
+
+
+table tr:nth-child(7) td:nth-child(1) { background-color: #bfbfbf; }
+table tr:nth-child(7) td:nth-child(2) { background-color: #b3b3b3; }
