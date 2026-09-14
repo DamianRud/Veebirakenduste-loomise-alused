@@ -1,9 +1,18 @@
+#lipud{
+    position: absolute;
+    top: 0%;
+    left: 70%;
+
+}
+
 #eesti{
     width: 330px;
     height: 210px;
     border: 1px solid black;
     border-spacing: 0;
-
+    position: absolute;
+    top: 50px;
+    left: 600px;
 
 }
 /*pseudoelementide kasutamine*/
