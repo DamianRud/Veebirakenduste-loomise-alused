@@ -120,3 +120,32 @@
 
 
 
+#sveits {
+    width: 330px;
+    height: 330px;
+    border: 1px solid black;
+    border-spacing: 0;
+    position: absolute;
+    top: 1050px;
+    left: 900px;
+    background-color: red;
+}
+
+#sveits td {
+    border: 0px solid black;
+}
+
+#sveits tr:nth-child(1) td:nth-child(1),
+#sveits tr:nth-child(1) td:nth-child(3),
+#sveits tr:nth-child(3) td:nth-child(1),
+#sveits tr:nth-child(3) td:nth-child(3) {
+    background-color: red;
+}
+
+#sveits tr:nth-child(1) td:nth-child(2),
+#sveits tr:nth-child(3) td:nth-child(2),
+#sveits tr:nth-child(2) td:nth-child(1),
+#sveits tr:nth-child(2) td:nth-child(2),
+#sveits tr:nth-child(2) td:nth-child(3) {
+    background-color: white;
+}
