@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Klaviatuur</title>
+  <link rel="stylesheet" href="mapareastyle.css">
+</head>
+<body>
+
+<header>
+  <h1>Map area kasutamine</h1>
+  <p>Palun tee klõps hiirega pildi peal!</p>
+</header>
+
+<main>
+  <img src="töölaud.jpg" alt="arvuti pilt" usemap="#arvutipilt">
+
+  <map name="arvutipilt">
+    <area shape="rect" coords="82,49,486,323" href="monitor.html" alt="Monitor" title="Monitor">
+    <area shape="rect" coords="100,340,400,420" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
+    <area shape="circle" coords="435,380,35" href="hiir.html" alt="Hiir" title="Hiir">
+    <area shape="circle" coords="435,45,30" href="tass.html" alt="Tass" title="Tass">
+    <area shape="poly" coords="450,450,550,460,570,580,440,570" href="markmik.html" alt="Märkmik" title="Märkmik">
+    <area shape="poly" coords="66,318,101,253,141,216" href="kolar.html" alt="Kõlar" title="Kõlar">
+  </map>
+
+  <section class="kirjeldus-kast esiletoodud">
+    <h2>Klaviatuur</h2>
+    <p>Klaviatuur on peamine sisendseade teksti sisestamiseks ja käskude andmiseks arvutile.</p>
+    <p>Programmeerijale ja õpilasele on mugav klaviatuur igapäevases töös erakordselt tähtis tööriist.</p>
+    <p>Kaasaegsed klaviatuurid aitavad vältida randmevalusid pikka aega arvuti taga töötades.</p>
+    <a href="maparia.html" class="tagasi-link">← Tagasi algusesse</a>
+  </section>
+</main>
+
+<footer>
+  <p><a href="index.html">Tagasi minu kodulehele</a></p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+  imageMapResize();
+</script>
+</body>
+</html>

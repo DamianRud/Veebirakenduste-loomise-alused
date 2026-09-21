@@ -1,0 +1,46 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+    text-align: center;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+}
+
+
+.kirjeldus-kast {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+
+.kirjeldus-kast {
+    background-color: #e6f2ff;
+}
+
+
+.kirjeldus-kast h2 {
+    color: #000000;
+    margin-top: 0;
+}
+
+
+.tagasi-link {
+    margin-top: 10px;
+    color: #0000ff;
+}
+
+
+footer {
+    margin-top: 20px;
+}

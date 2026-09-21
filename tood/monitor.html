@@ -2,27 +2,49 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Map area</title>
+    <title>Monitor</title>
+    <link rel="stylesheet" href="mapareastyle.css">
 </head>
 <body>
 
-<h1>Map area kasutamine</h1>
+<header>
+    <h1>Map area kasutamine</h1>
+    <p>Palun tee klõps hiirega pildi peal!</p>
+</header>
 
-<img src="images.jpg" alt="arvuti pilt" usemap="#arvutipilt">
+<main>
 
-<map name="arvutipilt">
-    <area shape="circle" coords="435,45,50" href="https://www.eesti.ee/eraisik/et/artikkel/eesti-vabariik/eesti-vabariik/ueldandmed" alt="Kaamera" target="_blank">
+    <img src="töölaud.jpg" alt="arvuti pilt" usemap="#arvutipilt">
 
-    <area shape="rect" coords="82,49,486,323" href="monitor.html" alt="monitor">
+    <map name="arvutipilt">
+        <area shape="rect" coords="82,49,486,323" href="monitor.html" alt="Monitor" title="Monitor">
+        <area shape="rect" coords="100,340,400,420" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
+        <area shape="circle" coords="435,380,35" href="hiir.html" alt="Hiir" title="Hiir">
+        <area shape="circle" coords="435,45,30" href="tass.html" alt="Tass" title="Tass">
+        <area shape="poly" coords="450,450,550,460,570,580,440,570" href="markmik.html" alt="Märkmik" title="Märkmik">
+        <area shape="poly" coords="66,318,101,253,141,216" href="kolar.html" alt="Kõlar" title="Kõlar">
+    </map>
 
-    <area shape="poly" coords="66,318,101,253,141,216" href="prygi.html" alt="prügikast">
+    <section class="kirjeldus-kast esiletoodud">
+        <h2>Monitor / Ekraan</h2>
+        <p>Arvuti ekraan on peamine väljundseade, mis kuvab kasutajale visuaalset teavet ja kasutajaliidest.</p>
+        <p>Hea eraldusvõimega ekraan vähendab silmade väsimust ning võimaldab mugavalt töödelda teksti ja koodi.</p>
+        <p>Sellel töölaual on ekraan asetatud silmade kõrgusele, et tagada õige ergonoomiline asend.</p>
+        <a href="maparia.html" class="tagasi-link">← Tagasi algusesse</a>
+    </section>
+</main>
 
-    <area shape="circle" coords="254,311,50" href="https://www.google.com/search?gs_ssp=eJzj4tDP1TcwNig0N2D04izPL8pJUUguLQAAPTUGLQ&q=world+cup&rlz=1C1GCEB_en__1230__1230&oq=world+&gs_lcrp=EgZjaHJvbWUqDAgBEC4YQxiABBiKBTIGCAAQRRg5MgwIARAuGEMYgAQYigUyDAgCEC4YQxiABBiKBTIPCAMQLhhDGLEDGIAEGIoFMhIIBBAuGEMYxwEY0QMYgAQYigUyDAgFEAAYQxiABBiKBTIMCAYQLhhDGIAEGIoFMgwIBxAAGEMYgAQYigUyDAgIEC4YQxiABBiKBdIBCDc1OTRqMGo3qAIIsAIB8QVU707H4ZbswA&sourceid=chrome&source=chrome.ob&ie=UTF-8&safe=active&ssui=on" alt="Kaamera" target="_blank">
+<footer>
+    <p><a href="index.html">Tagasi minu kodulehele</a></p>
+</footer>
 
 
-</map>
 
-<div>See on kasutaja monitor,kus sa näed tabeli vasak ülenurk,parem ülenurk,puuteolaat,vasak alumine nurk</div>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+    imageMapResize();
+</script>
 </body>
 </html>

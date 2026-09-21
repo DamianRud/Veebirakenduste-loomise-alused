@@ -2,33 +2,55 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Map area</title>
+    <title>Pildikaart - Töölaud</title>
+    <link rel="stylesheet" href="mapareastyle.css">
 </head>
 <body>
 
-<h1>Map area kasutamine</h1>
+<header>
+    <h1>Map area kasutamine</h1>
+    <p>Palun tee klõps hiirega pildi peal!</p>
+</header>
 
-<img src="images.jpg" alt="arvuti pilt" usemap="#arvutipilt" >
+<main>
 
-<map name="arvutipilt">
-    <!-- /*vasak ülenurk*/-->
-    <area shape="rect" coords="82,49,486,323" href="monitor.html" alt="monitor">
+    <img src="töölaud.jpg" alt="arvuti pilt" usemap="#arvutipilt">
 
-    <!--/*parem ülenurk*/-->
-    <area shape="circle" coords="435,45,30" href="https://www.eesti.ee/eraisik/et/artikkel/eesti-vabariik/eesti-vabariik/ueldandmed" alt="Kaamera" target="_blank">
+    <map name="arvutipilt">
+        <!-- Monitor -->
+        <area shape="rect" coords="335,178,542,342" href="monitor.html" alt="Monitor" title="Monitor">
 
-    <!--/*puuteolaat*/-->
-    <area shape="circle" coords="255,306,60" href="https://www.google.com/search?q=world+cup" alt="Google" target="_blank">
+        <!-- Klaviatuur -->
+        <area shape="rect" coords="185,395,318,438" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
 
-    <!--/*vasak alumine nurk*/-->
+        <!-- Hiir -->
+        <area shape="circle" coords="328,426,30" href="hiir.html" alt="Hiir" title="Hiir">
 
-    <area shape="poly" coords="66,318,101,253,141,216" href="prygi.html" alt="prügikast">
+        <!-- Tass -->
+        <area shape="rect" coords="173,310,217,378" href="tass.html" alt="Tass" title="Tass">
+
+        <!-- Markmik -->
+        <area shape="poly" coords="390,466,540,450,600,540,430,555" href="markmik.html" alt="Märkmik" title="Märkmik">
+
+        <!-- Kolar -->
+        <area shape="rect" coords="233,234,326,334" href="kolar.html" alt="Kõlar" title="Kõlar">
+    </map>
+
+    <section class="kirjeldus-kast">
+        <h2>Vali pildilt mõni ala!</h2>
+        <p>Klõpsa pildil olevale esemele, et lugeda selle kohta lähemalt.</p>
+    </section>
+</main>
+
+<footer>
+    <p><a href="index.html">Tagasi minu kodulehele</a></p>
+</footer>
 
 
-
-</map>
-
-<div>Palun tee klõps hiirega pildi peal!</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+    imageMapResize();
+</script>
 
 </body>
 </html>
