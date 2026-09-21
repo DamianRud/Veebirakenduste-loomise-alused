@@ -7,13 +7,16 @@
 <body>
 <h1>Muusika küsimustik</h1>
 <div>HTML vormid ja nupud</div>
+
 <form action="#">
     <!-- c+ tab komentaar -->
     <!-- tekstkast -->
     <label for="nimi">Vali meeldivaim muusikastist:</label>
     <br>
+
     <input type="text" id="nimi" placeholder="Nimi">
     <br>
+
     <select name="stiil" id="stiil">
         <option value="vali">vali..</option>
         <option value="hiphop">hiphop</option>
@@ -22,8 +25,22 @@
         <option value="metal">metal</option>
     </select>
     <br>
+
     <!-- radio nupud -üks valik mitmest -->
-    <input type="radio" name="">
+    <label>
+        kuidas sa muusikat peamiselt kuulad?
+    </label>
+
+    <input type="radio" name="platvorm" id="spotify">
+    <label for="spotify">spotify</label>
+    <br>
+
+    <input type="radio" name="platvorm" id="raadio">
+    <label for="raadio">raadio</label>
+    <br>
+
+    <input type="radio" name="platvorm" id="vinüülplaat">
+    <label for="vinüülplaat">vinüülplaat</label>
 </form>
 </body>
 </html>
