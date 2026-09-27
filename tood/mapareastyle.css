@@ -1,18 +1,36 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    margin: 20px;
+    margin: 0;
     text-align: center;
+    color: #222222;
 }
 
+header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+}
 
-img {
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+header p {
+    margin: 0;
+}
+
+.pildi-mahuti {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.kaardi-pilt {
+    width: 600px;
     max-width: 100%;
-    height: auto;
-    border: 1px solid #000000;
+    border: 2px solid #333333;
 }
-
 
 .kirjeldus-kast {
     background-color: #ffffff;
@@ -23,24 +41,15 @@ img {
     text-align: left;
 }
 
-
-.kirjeldus-kast {
-    background-color: #e6f2ff;
-}
-
-
 .kirjeldus-kast h2 {
-    color: #000000;
-    margin-top: 0;
+    color: #333333;
 }
-
-
-.tagasi-link {
-    margin-top: 10px;
-    color: #0000ff;
-}
-
 
 footer {
     margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer a {
+    color: #0000ff;
 }

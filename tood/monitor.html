@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <title>Monitor</title>
-    <link rel="stylesheet" href="mapareastyle.css">
+<meta charset="UTF-8">
+<title>Pildikaart – Monitor</title>
+<link rel="stylesheet" href="mapareastyle.css">
 </head>
 <body>
 
 <header>
-    <h1>Map area kasutamine</h1>
-    <p>Palun tee klõps hiirega pildi peal!</p>
+    <h1>Pildikaart – kodune töölaud</h1>
+    <p>Klõpsa hiirega pildil oleval esemel, et näha selle kohta lähemalt.</p>
 </header>
 
-<main>
-
-    <img src="pildid/monitor.jpg" alt="Monitor" class="kirjelduse-pilt">
-
-    <map name="arvutipilt">
-        <area shape="rect" coords="82,49,486,323" href="monitor.html" alt="Monitor" title="Monitor">
-        <area shape="rect" coords="100,340,400,420" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
-        <area shape="circle" coords="435,380,35" href="hiir.html" alt="Hiir" title="Hiir">
-        <area shape="circle" coords="435,45,30" href="tass.html" alt="Tass" title="Tass">
-        <area shape="poly" coords="450,450,550,460,570,580,440,570" href="markmik.html" alt="Märkmik" title="Märkmik">
-        <area shape="poly" coords="66,318,101,253,141,216" href="kolar.html" alt="Kõlar" title="Kõlar">
+<div class="pildi-mahuti">
+    <img src="pildid/toolaud.jpg" alt="Kodune töölaud" usemap="#tooalad"
+         class="kaardi-pilt" width="600" height="902">
+    <map name="tooalad">
+        <area shape="rect" coords="303,293,502,472" href="monitor.html" alt="Monitor" title="Monitor">
+        <area shape="rect" coords="163,552,302,602" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
+        <area shape="circle" coords="290,617,38" href="hiir.html" alt="Hiir" title="Hiir">
+        <area shape="circle" coords="178,493,38" href="tass.html" alt="Tass" title="Tass">
+        <area shape="poly" coords="215,418,292,425,288,538,213,532" href="kolar.html" alt="Kõlar" title="Kõlar">
+        <area shape="poly" coords="335,655,470,635,565,665,545,735,345,725" href="markmik.html" alt="Märkmik" title="Märkmik">
     </map>
+</div>
 
-    <section class="kirjeldus-kast esiletoodud">
-        <h2>Monitor / Ekraan</h2>
-        <p>Arvuti ekraan on peamine väljundseade, mis kuvab kasutajale visuaalset teavet ja kasutajaliidest.</p>
-        <p>Hea eraldusvõimega ekraan vähendab silmade väsimust ning võimaldab mugavalt töödelda teksti ja koodi.</p>
-        <p>Sellel töölaual on ekraan asetatud silmade kõrgusele, et tagada õige ergonoomiline asend.</p>
-        <a href="maparia.html" class="tagasi-link">← Tagasi algusesse</a>
-    </section>
-</main>
+<section class="kirjeldus-kast">
+    <h2>Monitor</h2>
+    <p>Monitor on peamine väljundseade, mis kuvab kasutajaliidest ja tööks vajalikku infot.</p>
+    <p>Kaardus ekraan pakub laiemat vaatevälja ja mugavamat töökogemust pikaajalisel istumisel.</p>
+    <p>Ekraan on paigutatud silmade kõrgusele, et tagada õige ja ergonoomiline kehaasend.</p>
+</section>
 
 <footer>
     <p><a href="index.html">Tagasi minu kodulehele</a></p>
 </footer>
 
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
-<script>
-    imageMapResize();
-</script>
 </body>
 </html>

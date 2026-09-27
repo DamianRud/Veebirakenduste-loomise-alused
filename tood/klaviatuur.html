@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <title>Klaviatuur</title>
-  <link rel="stylesheet" href="mapareastyle.css">
+<meta charset="UTF-8">
+<title>Pildikaart – Klaviatuur</title>
+<link rel="stylesheet" href="mapareastyle.css">
 </head>
 <body>
 
 <header>
-  <h1>Map area kasutamine</h1>
-  <p>Palun tee klõps hiirega pildi peal!</p>
+    <h1>Pildikaart – kodune töölaud</h1>
+    <p>Klõpsa hiirega pildil oleval esemel, et näha selle kohta lähemalt.</p>
 </header>
 
-<main>
-  <img src="pildid/klaviatur.jpg" alt="arvuti pilt" usemap="#arvutipilt" class="kirjelduse-pilt">
+<div class="pildi-mahuti">
+    <img src="pildid/toolaud.jpg" alt="Kodune töölaud" usemap="#tooalad"
+         class="kaardi-pilt" width="600" height="902">
+    <map name="tooalad">
+        <area shape="rect" coords="303,293,502,472" href="monitor.html" alt="Monitor" title="Monitor">
+        <area shape="rect" coords="163,552,302,602" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
+        <area shape="circle" coords="290,617,38" href="hiir.html" alt="Hiir" title="Hiir">
+        <area shape="circle" coords="178,493,38" href="tass.html" alt="Tass" title="Tass">
+        <area shape="poly" coords="215,418,292,425,288,538,213,532" href="kolar.html" alt="Kõlar" title="Kõlar">
+        <area shape="poly" coords="335,655,470,635,565,665,545,735,345,725" href="markmik.html" alt="Märkmik" title="Märkmik">
+    </map>
+</div>
 
-  <map name="arvutipilt">
-    <area shape="rect" coords="82,49,486,323" href="monitor.html" alt="Monitor" title="Monitor">
-    <area shape="rect" coords="100,340,400,420" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
-    <area shape="circle" coords="435,380,35" href="hiir.html" alt="Hiir" title="Hiir">
-    <area shape="circle" coords="435,45,30" href="tass.html" alt="Tass" title="Tass">
-    <area shape="poly" coords="450,450,550,460,570,580,440,570" href="markmik.html" alt="Märkmik" title="Märkmik">
-    <area shape="poly" coords="66,318,101,253,141,216" href="kolar.html" alt="Kõlar" title="Kõlar">
-  </map>
-
-  <section class="kirjeldus-kast esiletoodud">
+<section class="kirjeldus-kast">
     <h2>Klaviatuur</h2>
-    <p>Klaviatuur on peamine sisendseade teksti sisestamiseks ja käskude andmiseks arvutile.</p>
-    <p>Programmeerijale ja õpilasele on mugav klaviatuur igapäevases töös erakordselt tähtis tööriist.</p>
-    <p>Kaasaegsed klaviatuurid aitavad vältida randmevalusid pikka aega arvuti taga töötades.</p>
-    <a href="maparia.html" class="tagasi-link">← Tagasi algusesse</a>
-  </section>
-</main>
+    <p>Klaviatuur on peamine sisendseade teksti kirjutamiseks ja koodi loomiseks.</p>
+    <p>Mugav ja vaikne klaviatuur vähendab käte väsimust pikkade tööpäevade jooksul.</p>
+    <p>Kompaktne disain jätab töölauale rohkem vaba ruumi.</p>
+</section>
 
 <footer>
-  <p><a href="index.html">Tagasi minu kodulehele</a></p>
+<p><a href="index.html">Tagasi minu kodulehele</a></p>
 </footer>
 
-
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
-<script>
-  imageMapResize();
-</script>
 </body>
 </html>
