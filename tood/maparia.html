@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <title>Pildikaart - Töölaud</title>
-    <link rel="stylesheet" href="mapareastyle.css">
+<meta charset="UTF-8">
+<title>Pildikaart – Kodune töölaud</title>
+<link rel="stylesheet" href="mapareastyle.css">
 </head>
 <body>
 
 <header>
-    <h1>Map area kasutamine</h1>
-    <p>Palun tee klõps hiirega pildi peal!</p>
+    <h1>Pildikaart – kodune töölaud</h1>
+    <p>Klõpsa hiirega pildil oleval esemel, et näha selle kohta lähemalt.</p>
 </header>
 
-<main>
-
-    <img src="töölaud.jpg" alt="arvuti pilt" usemap="#arvutipilt" class="kirjelduse-pilt">
-
-    <map name="arvutipilt">
-        <!-- Monitor -->
-        <area shape="rect" coords="335,178,542,342" href="monitor.html" alt="Monitor" title="Monitor">
-
-        <!-- Klaviatuur -->
-        <area shape="rect" coords="185,395,318,438" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
-
-        <!-- Hiir -->
-        <area shape="circle" coords="328,426,30" href="hiir.html" alt="Hiir" title="Hiir">
-
-        <!-- Tass -->
-        <area shape="rect" coords="173,310,217,378" href="tass.html" alt="Tass" title="Tass">
-
-        <!-- Markmik -->
-        <area shape="poly" coords="390,466,540,450,600,540,430,555" href="markmik.html" alt="Märkmik" title="Märkmik">
-
-        <!-- Kolar -->
-        <area shape="rect" coords="233,234,326,334" href="kolar.html" alt="Kõlar" title="Kõlar">
+<div class="pildi-mahuti">
+    <img src="pildid/toolaud.jpg" alt="Kodune töölaud" usemap="#tooalad"
+         class="kaardi-pilt" width="600" height="902">
+    <map name="tooalad">
+        <area shape="rect" coords="303,293,502,472" href="monitor.html" alt="Monitor" title="Monitor">
+        <area shape="rect" coords="163,552,302,602" href="klaviatuur.html" alt="Klaviatuur" title="Klaviatuur">
+        <area shape="circle" coords="290,617,38" href="hiir.html" alt="Hiir" title="Hiir">
+        <area shape="circle" coords="178,493,38" href="tass.html" alt="Tass" title="Tass">
+        <area shape="poly" coords="215,418,292,425,288,538,213,532" href="kolar.html" alt="Kõlar" title="Kõlar">
+        <area shape="poly" coords="335,655,470,635,565,665,545,735,345,725" href="markmik.html" alt="Märkmik" title="Märkmik">
     </map>
+</div>
 
-    <section class="kirjeldus-kast">
-        <h2>Vali pildilt mõni ala!</h2>
-        <p>Klõpsa pildil olevale esemele, et lugeda selle kohta lähemalt. Rect: Monitor, Klaviatuur Circle: Hiir, Tass Poly: Märkmik, Kõlar
-            -----Vabandust, mul on paigutus natuke viltu----
-        </p>
-    </section>
-</main>
+<section class="kirjeldus-kast">
+    <h2>Vali pildilt mõni ese</h2>
+    <p>Klõpsa suurel pildil mõnele esemele (monitor, klaviatuur, hiir, tass, kõlar või märkmik), et lugeda selle kohta lähemalt.</p>
+</section>
 
 <footer>
-    <p><a href="index.html">Tagasi minu kodulehele</a></p>
+   <p><a href="index.html">Tagasi minu kodulehele</a></p>
 </footer>
 
 </body>
