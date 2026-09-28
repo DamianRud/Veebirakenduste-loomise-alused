@@ -91,7 +91,7 @@ function selectValik(){
         vastus5.innerHTML="palun tee oma valik";
     }
 
-    return vastus5;
+    return stiil.value;
 }
 
 
@@ -108,21 +108,76 @@ function naitaKoike() {
     let valik2 = checkboxValik();
     let tund = radioValik();
     let stiil = selectValik();
+    let arvamus=arvamuslugemine();
+    let valik3=radioValik2();
+    let jaam = raadiojaamLugemine();
 
     vastusKoik.innerHTML = "Sinu nimi on: " + nimi + '<br>' +
         'Sinu lemmikud on : ' + valik2 + '<br>' +
         'Sa kasutad ' + valik + '<br>' +
         'Sa kuuled ' + tund + ' tundi<br>' +
-        'Sa valisid ' + stiil;
+        'Sa valisid ' + stiil + '<br>' +
+        'sinu arvamus:' + arvamus + '<br>' +
+        "sa kuuled radio:" + valik3 + '<br>' +
+        "raadiojaam:" + jaam;
 }
+
+
 
 function puhasta(){
     vastus1.innerHTML="";
     vastus2.innerHTML="";
     vastus3.innerHTML="";
-    vastusKoik.innerHTML="";
     vastus4.innerHTML="";
     vastus5.innerHTML="";
+    vastus6.innerHTML="";
+    vastus7.innerHTML="";
+    vastus9.innerHTML="";
+    vastusKoik.innerHTML="";
+}
 
 
+
+
+
+function  arvamuslugemine(){
+    let vastus6=document.getElementById("vastus6");
+    let arvamus=document.getElementById("arvamus");
+
+
+    vastus6.innerHTML="teie arvamus: "+arvamus.value;
+    vastus6.style.backgroundColor="lightgreen";
+
+    return arvamus.value;
+}
+
+
+
+function radioValik2() {
+    let vastus7 = document.getElementById("vastus7");
+    let jah = document.getElementById("jah");
+    let ei = document.getElementById("ei");
+
+    let valik3 = "";
+    if (jah.checked) {
+        valik3 = jah.value;
+    } else if (ei.checked) {
+        valik3 = ei.value;
+    } else {
+        valik3 = "Palun tee oma valik!";
+    }
+
+    vastus7.innerHTML = "Valik on: " + valik3;
+    return valik3;
+}
+
+
+
+
+function raadiojaamLugemine() {
+    let vastus9 = document.getElementById("vastus9");
+    let raadiojaam = document.getElementById("raadiojaam");
+
+    vastus9.innerHTML = "raadiojaam: " + raadiojaam.value;
+    return raadiojaam.value;
 }

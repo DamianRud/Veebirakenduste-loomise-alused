@@ -46,8 +46,12 @@
                     <option value="metal">metal</option>
                 </select>
 
+
+            <td>
                 <div id="vastus5"></div>
             </td>
+
+
         </tr>
 
         <!-- radio nupud - üks valik mitmest -->
@@ -116,8 +120,11 @@
                 0
                 <input type="range" id="tund" min="0" max="24" onchange="rangeValik()">
                 24
+            <td>
                 <div id="vastus4"></div>
             </td>
+
+
         </tr>
 
         <!-- 5 uut input tüüpi -->
@@ -165,7 +172,52 @@
             <td>
                 <input type="password" id="password" placeholder="Parool">
             </td>
+
+
         </tr>
+
+        <tr>
+            <td>
+                <label for="arvamus">Mida arvad muusika kuulamisest koolis</label>
+            </td>
+            <td>
+                <textarea name="arvamus" id="arvamus" cols="30" rows="10" oninput="arvamuslugemine()"></textarea>
+            </td>
+            <td>
+                <div id="vastus6"></div>
+            </td>
+
+
+
+        <tr>
+            <td>
+                <strong>Kas sa kuulad raadiot?</strong>
+            </td>
+            <td>
+                <input type="radio" name="raadioValik" id="jah" value="Jah" onclick="radioValik2()">
+                <label for="jah">Jah</label><br>
+                <input type="radio" name="raadioValik" id="ei" value="Ei" onclick="radioValik2()">
+                <label for="ei">Ei</label><br>
+            </td>
+            <td>
+                <div id="vastus7"></div>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+                <label for="raadiojaam">Milliseid raadiojaamu oskad nimetada?</label>
+            </td>
+            <td>
+                <input type="text" name="raadiojaam" id="raadiojaam" placeholder="shanson" oninput="raadiojaamLugemine()">
+            </td>
+            <td>
+                <div id="vastus9"></div>
+            </td>
+        </tr>
+
 
         <tr>
             <td>
@@ -176,9 +228,9 @@
                 <input type="button" value="Näita/Loe andmed" onclick="naitaKoike()">
             </td>
 
-        <td>
-            <div id="vastusKoik"></div>
-        </td>
+            <td>
+                <div id="vastusKoik"></div>
+            </td>
 
 
     </table>
