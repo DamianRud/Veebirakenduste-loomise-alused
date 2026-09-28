@@ -38,13 +38,15 @@
                 </label>
             </td>
             <td>
-                <select name="stiil" id="stiil">
+                <select name="stiil" id="stiil" onchange="selectValik()">
                     <option value="vali">vali..</option>
                     <option value="hiphop">hiphop</option>
                     <option value="kantri">kantri</option>
                     <option value="rock">rock</option>
                     <option value="metal">metal</option>
                 </select>
+
+                <div id="vastus5"></div>
             </td>
         </tr>
 
@@ -112,8 +114,9 @@
             </td>
             <td>
                 0
-                <input type="range" id="tund" min="0" max="24">
+                <input type="range" id="tund" min="0" max="24" onchange="rangeValik()">
                 24
+                <div id="vastus4"></div>
             </td>
         </tr>
 

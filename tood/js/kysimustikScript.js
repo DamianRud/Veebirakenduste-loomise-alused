@@ -69,17 +69,51 @@ function checkboxValik() {
     return valik2;
 }
 
+//range
+function rangeValik() {
+    let vastus4 = document.getElementById("vastus4");
+    let tund = document.getElementById("tund");
+
+    vastus4.innerHTML = "Sa kuuled muusikat: " + tund.value + " tundi";
+
+    return tund.value;
+}
+
+//select
+function selectValik(){
+    let vastus5 = document.getElementById("vastus5");
+    let stiil=document.getElementById("stiil");
+    //0-1. rida loetusel
+    if(stiil.selectedIndex!==0){
+        vastus5.innerHTML="Sa valisid:"+stiil.value;
+
+    }else{
+        vastus5.innerHTML="palun tee oma valik";
+    }
+
+    return vastus5;
+}
+
+
+
+
+
+
 //kasutab teisi funktsioone
 
-function naitaKoike(){
-    let vastusKoik=document.getElementById("vastusKoik");
-    let nimi=nimilugeminekastist();
-    let valik=radioValik();
-    let valik2=checkboxValik();
+function naitaKoike() {
+    let vastusKoik = document.getElementById("vastusKoik");
+    let nimi = nimilugeminekastist();
+    let valik = radioValik();
+    let valik2 = checkboxValik();
+    let tund = radioValik();
+    let stiil = selectValik();
 
     vastusKoik.innerHTML = "Sinu nimi on: " + nimi + '<br>' +
-        'Sinu lemmikud on: ' + valik2 + '<br>' +
-        'Sa kasutad ' + valik;
+        'Sinu lemmikud on : ' + valik2 + '<br>' +
+        'Sa kasutad ' + valik + '<br>' +
+        'Sa kuuled ' + tund + ' tundi<br>' +
+        'Sa valisid ' + stiil;
 }
 
 function puhasta(){
@@ -87,6 +121,8 @@ function puhasta(){
     vastus2.innerHTML="";
     vastus3.innerHTML="";
     vastusKoik.innerHTML="";
+    vastus4.innerHTML="";
+    vastus5.innerHTML="";
 
 
 }
