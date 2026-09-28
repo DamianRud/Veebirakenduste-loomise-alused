@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Muusika küsimustik</title>
     <link rel="stylesheet" href="vormstyle.css">
+    <script src="../js/kysimustikScript.js"></script>
 </head>
 
 <body>
@@ -20,9 +21,15 @@
                 <label for="nimi">Vali meeldivaim muusikastist:</label>
             </td>
             <td>
-                <input type="text" id="nimi" placeholder="Nimi">
+                <input type="text" id="nimi" placeholder="Nimi" oninput="nimilugeminekastist()">
+            </td>
+
+
+            <td>
+                <div id="vastus1"></div>
             </td>
         </tr>
+
 
         <tr>
             <td>
@@ -48,14 +55,19 @@
                 <label>Platvorm:</label>
             </td>
             <td>
-                <input type="radio" name="platvorm" id="spotify">
+                <input type="radio" name="platvorm" id="spotify" value="spotify" onclick="radioValik()">
                 <label for="spotify">spotify</label>
                 <br>
-                <input type="radio" name="platvorm" id="raadio">
+
+                <input type="radio" name="platvorm" id="raadio" value="raadio" onclick="radioValik()">
                 <label for="raadio">raadio</label>
                 <br>
-                <input type="radio" name="platvorm" id="vinüülplaat">
-                <label for="vinüülplaat">vinüülplaat</label>
+
+                <input type="radio" name="platvorm" id="vinyl" value="vinüülplaat" onclick="radioValik()">
+                <label for="vinyl">vinüülplaat</label>
+
+            <td>
+                <div id="vastus2"></div>
             </td>
         </tr>
 
@@ -71,17 +83,22 @@
                         Tee oma valikud - lemmik ansambel
                     </legend>
 
-                    <input type="checkbox" name="lemmikud" id="rollingstones">
+                    <input type="checkbox" name="lemmikud" id="rollingstones" value="rollingstones" onchange="checkboxValik()">
                     <label for="rollingstones">Rolling stones</label>
                     <br>
 
-                    <input type="checkbox" name="lemmikud" id="systemofdown">
+                    <input type="checkbox" name="lemmikud" id="systemofdown" value="system of down" onchange="checkboxValik()">
                     <label for="systemofdown">System of Down</label>
                     <br>
 
-                    <input type="checkbox" name="lemmikud" id="metallica">
+                    <input type="checkbox" name="lemmikud" id="metallica" value="metallica" onchange="checkboxValik()">
                     <label for="metallica">metallica</label>
                 </fieldset>
+            </td>
+
+
+            <td>
+                <div id="vastus3"></div>
             </td>
         </tr>
 
@@ -146,6 +163,20 @@
                 <input type="password" id="password" placeholder="Parool">
             </td>
         </tr>
+
+        <tr>
+            <td>
+                <input type="reset" value="Puhasta" onclick="puhasta()">
+            </td>
+
+            <td>
+                <input type="button" value="Näita/Loe andmed" onclick="naitaKoike()">
+            </td>
+
+        <td>
+            <div id="vastusKoik"></div>
+        </td>
+
 
     </table>
 </form>
