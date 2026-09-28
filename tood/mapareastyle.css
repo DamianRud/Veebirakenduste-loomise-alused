@@ -39,6 +39,9 @@ header p {
     margin: 20px auto;
     max-width: 500px;
     text-align: left;
+    position: absolute;
+    top: 40px;
+    left: 100px;
 }
 
 .kirjeldus-kast h2 {
@@ -52,4 +55,10 @@ footer {
 
 footer a {
     color: #0000ff;
+}
+
+.kirjeldus-pilt {
+    width: 100%;
+    border: 1px solid #a855f7;
+    border-radius: 10px;
 }
