@@ -16,14 +16,23 @@ function radioValik() {
     let raadio = document.getElementById("raadio");
     let vinyl = document.getElementById("vinyl");
 
+
+    let pilt = document.getElementById("pilt");
+
     let valik="";
 
     if(spotify.checked){
         valik=spotify.value;
+        pilt.src="../pildid/smail.png"
     } else if(raadio.checked){
         valik=raadio.value;
+        pilt.src="../pildid/kurb.png"
     } else if(vinyl.checked){
         valik=vinyl.value;
+        pilt.src="../pildid/lill.png"
+    } else if(vinyl.checked){
+        valik=vinyl.value;
+        pilt.src="../pildid/neutral.png"
     } else {
         valik="palun tee oma valik";
     }
@@ -80,20 +89,24 @@ function rangeValik() {
 }
 
 //select
-function selectValik(){
+function selectValik() {
     let vastus5 = document.getElementById("vastus5");
-    let stiil=document.getElementById("stiil");
-    //0-1. rida loetusel
-    if(stiil.selectedIndex!==0){
-        vastus5.innerHTML="Sa valisid:"+stiil.value;
+    let stiil = document.getElementById("stiil");
+    let stiiliPilt = document.getElementById("stiiliPilt");
 
-    }else{
-        vastus5.innerHTML="palun tee oma valik";
+    if (stiil.selectedIndex !== 0) {
+        vastus5.innerHTML = "Sa valisid: " + stiil.value;
+
+        stiiliPilt.src = "../pildid/" + stiil.value + ".png";
+        stiiliPilt.style.display = "block";
+    } else {
+        vastus5.innerHTML = "palun tee oma valik";
+        stiiliPilt.src = "";
+        stiiliPilt.style.display = "none";
     }
 
     return stiil.value;
 }
-
 
 
 
@@ -181,3 +194,4 @@ function raadiojaamLugemine() {
     vastus9.innerHTML = "raadiojaam: " + raadiojaam.value;
     return raadiojaam.value;
 }
+
