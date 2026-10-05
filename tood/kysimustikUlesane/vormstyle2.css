@@ -1,0 +1,42 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+input, textarea, select {
+    padding: 5px;
+    margin: 5px;
+}
+
+textarea {
+    width: 90%;
+    height: 60px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: gray;
+    color: white;
+
+}
+
+button:hover {
+    background-color: black;
+}
+

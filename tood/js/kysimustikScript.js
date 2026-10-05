@@ -195,3 +195,25 @@ function raadiojaamLugemine() {
     return raadiojaam.value;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Küsimustik</title>
+  <script src="kysimustik2.js"></script>
+  <link rel="stylesheet" href="vormstyle2.css">
+</head>
+<body>
+
+
+<h1>Programmeeringu küsimustik</h1>
+
+<table border="1">
+
+  <tr>
+    <th>Küsimus</th>
+    <th>Vastus</th>
+    <th>Tulemus</th>
+  </tr>
+
+  <tr>
+    <td>
+      Milliseid programmeerimiskeeli sa tead?
+    </td>
+
+    <td>
+      <br>
+      <input type="checkbox" id="javascript" value="JavaScript" onchange="valikeeled()">
+      <label for="javascript">JavaScript</label><br>
+
+      <input type="checkbox" id="python" value="Python" onchange="valikeeled()">
+      <label for="python">Python</label><br>
+
+      <input type="checkbox" id="java" value="Java" onchange="valikeeled()">
+      <label for="java">Java</label><br>
+
+      <input type="checkbox" id="csharp" value="C#" onchange="valikeeled()">
+      <label for="csharp">C#</label><br>
+
+      <input type="checkbox" id="php" value="PHP" onchange="valikeeled()">
+      <label for="php">PHP</label>
+
+      <p id="keeledtulemus"></p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td>
+      Mida arvad programmeerimise õppimisest?
+      <p id="arvamusTulemus"></p>
+    </td>
+    <td>
+      <textarea id="arvamus"  oninput="arvamuseNaitamine()"></textarea>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Mitu tundi nädalas tegeled programmeerimisega?
+      <p id="tunnidTulemus"></p>
+    </td>
+    <td>
+      <input type="number" id="tunnid" oninput="tundideNaitamine()">
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Kas sulle meeldib programmeerida?
+      <p id="meeldibTulemus"></p>
+    </td>
+    <td>
+      <input type="radio" name="meeldib" id="Jah"  onclick="meeldibJah()">
+      <label for="Jah">Jah</label>
+      <input type="radio" name="meeldib" id="Ei" onclick="meeldibEi()">
+      <label for="Ei">Ei</label>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Milliseid programmeerimisega seotud tööriistu oskad nimetada?
+      <p id="tooriistadTulemus"></p>
+    </td>
+    <td>
+      <input type="text" id="tooriistad" oninput="tooriistadeNaitamine()">
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Millist programmeerimiskeelt sooviksid kõige rohkem õppida?
+      <p id="keelTulemus"></p>
+    </td>
+    <td>
+      <select id="keel" onchange="keeleNaitamine()">
+        <option value="">Vali keel</option>
+        <option value="Python">Python</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="C#">C#</option>
+        <option value="Java">Java</option>
+        <option value="PHP">PHP</option>
+
+      </select>
+    </td>
+  </tr>
+
+</table>
+
+<br>
+
+<button onclick="saada()">Saada</button>
+<button onclick="puhasta()">Puhasta</button>
+
+<div id="kokkuvote"></div>
+
+
+
+
+</body>
+</html>
