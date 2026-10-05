@@ -1,5 +1,13 @@
-/* Исправлен регистр буквы P: #randomPilt */
+.pildiRida {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
 
+#valitudPilt {
+    width: 385px;
+    height: 385px;
+}
 
 
 body {

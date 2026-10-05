@@ -6,17 +6,21 @@
     <link rel="stylesheet" href="piltStyle.css">
     <script src="../js/piltScript.js"></script>
 </head>
-<body onload="juhuslikpilt()">
+<body>
 
 <!--Paint: 4 pilti: smile.png, neutral.png kurb.png, lill.png
 300x300
 -->
 
 <h1>Juhuslik pilt</h1>
-<img src="../pildid/lill.png" alt="" id="randomPilt">
-<input type="button" onclick="juhuslikpilt()" value="vaheta pilt">
+<div class="pildiRida">
+    <div>
+        <img src="../pildid/lill.png" alt="" id="randomPilt">
+        <input type="button" onclick="juhuslikpilt()" value="vaheta pilt">
+    </div>
 
-
+    <img id="valitudPilt" src="" alt="" style="display:none;">
+</div>
 <h2>Mõistatus. Arva ära mida näed pildil</h2>
 
 <label for="valik">Tee oma valik:</label>

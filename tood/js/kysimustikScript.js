@@ -89,15 +89,24 @@ function rangeValik() {
 }
 
 //select
+//select
 function selectValik() {
     let vastus5 = document.getElementById("vastus5");
     let stiil = document.getElementById("stiil");
     let stiiliPilt = document.getElementById("stiiliPilt");
 
+ 
+    const pildid = {
+        hiphop: "../pildid/smail.png",
+        kantri: "../pildid/lill.png",
+        rock:   "../pildid/neutral.png",
+        metal:  "../pildid/kurb.png"
+    };
+
     if (stiil.selectedIndex !== 0) {
         vastus5.innerHTML = "Sa valisid: " + stiil.value;
 
-        stiiliPilt.src = "../pildid/" + stiil.value + ".png";
+        stiiliPilt.src = pildid[stiil.value];
         stiiliPilt.style.display = "block";
     } else {
         vastus5.innerHTML = "palun tee oma valik";
