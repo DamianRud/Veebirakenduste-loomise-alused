@@ -4,20 +4,18 @@ section#yld{
     gap: 10px;
 }
 
-section#kalk1{
+section#kalk1,
+section#kalk2,
+section#kalk3{
     border: 1pt solid #e4e4e4;
     border-radius: 10px;
     width: 30%;
     padding: 10px;
+    background-color: #fff8e7;
 }
 
-section#kalk2{
-    border: 1pt solid #e4e4e4;
-    border-radius: 10px;
-    width: 30%;
-    padding: 1px;
-}
-
-img#vastusepilt{
+img#vastusepilt,
+img#joogipilt,
+img#vastusepilt3{
     width: 100%;
 }
