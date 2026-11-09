@@ -152,3 +152,13 @@ function aken() {
     tx.fillStyle = "lightblue";
     tx.fillRect(120, 90, 120, 50);
 }
+
+function koik() {
+    ratas1();
+    ratas2();
+    korpus();
+    tuled();
+    keskpunktid();
+    aken();
+
+}
