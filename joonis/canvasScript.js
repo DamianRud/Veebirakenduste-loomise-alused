@@ -42,9 +42,11 @@ function kolmnurk() {
 
 function ristkylik() {
     const canvas = document.getElementById('canvas');//määrame canvas
+    let l=document.getElementById('laius');
+    let k=document.getElementById('Kõrgus');
     if(canvas.getContext('2d')) {
         let tx= canvas.getContext('2d');//2d tasand
-        tx.fillRect(100,150,200,250);
+        tx.fillRect(100,150,l.value,k.value);
     }
 }
 
@@ -67,4 +69,86 @@ function ring() {
         tx.fill();
         tx.stroke()
     }
+}
+function pilt(){
+    const canvas = document.getElementById('canvas');//määrame canvas element
+
+    if(canvas.getContext('2d')) {
+        let tx = canvas.getContext('2d');//2d tasand
+        const fail=new Image();
+        fail.src="https://picsum.photos/100/100?random=2";
+        fail.onload=()=>{
+            tx.drawImage(fail,50,50,100,100);
+        }
+    }
+}
+
+
+function ratas1() {
+    tx.beginPath();
+    tx.strokeStyle = "black";
+    tx.lineWidth = 3;
+    tx.arc(100, 240, 20, 0, 2 * Math.PI, true);
+    tx.stroke();
+}
+
+function ratas2() {
+    tx.beginPath();
+    tx.strokeStyle = "black";
+    tx.lineWidth = 3;
+    tx.arc(280, 240, 20, 0, 2 * Math.PI, true);
+    tx.stroke();
+}
+
+function korpus() {
+    tx.beginPath();
+    tx.strokeStyle = "black";
+    tx.lineWidth = 3;
+
+    tx.moveTo(40, 140);
+    tx.lineTo(340, 140);
+    tx.lineTo(340, 220);
+    tx.lineTo(40, 220);
+    tx.lineTo(40, 140);
+
+    tx.moveTo(120, 140);
+    tx.lineTo(120, 90);
+    tx.lineTo(240, 90);
+    tx.lineTo(240, 140);
+    tx.lineTo(120, 140);
+
+    tx.stroke();
+}
+function keskpunktid() {
+    tx.beginPath();
+    tx.fillStyle = "black";
+    tx.arc(100, 240, 6, 0, 2 * Math.PI, true);
+    tx.fill();
+
+    tx.beginPath();
+    tx.arc(280, 240, 6, 0, 2 * Math.PI, true);
+    tx.fill();
+}
+
+
+function tuled() {
+    tx.beginPath();
+    tx.strokeStyle = "black";
+    tx.lineWidth = 3;
+
+    tx.moveTo(340, 165);
+    tx.lineTo(380, 150);
+
+    tx.moveTo(340, 180);
+    tx.lineTo(385, 180);
+
+    tx.moveTo(340, 195);
+    tx.lineTo(380, 210);
+
+    tx.stroke();
+}
+
+function aken() {
+    tx.fillStyle = "lightblue";
+    tx.fillRect(120, 90, 120, 50);
 }
