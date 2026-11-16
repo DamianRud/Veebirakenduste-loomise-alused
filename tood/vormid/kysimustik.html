@@ -5,15 +5,21 @@
     <title>Muusika küsimustik</title>
     <link rel="stylesheet" href="vormstyle.css">
     <script src="../js/kysimustikScript.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+            integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
 <h1>Muusika küsimustik</h1>
 <div>HTML vormid ja nupud</div>
 
-<form action="#">
-    <!-- c+ tab komentaar -->
-    <!-- tekstkast -->
+<form action="#" id="muusikaVorm">
 
     <table border="1">
         <tr>
@@ -21,97 +27,97 @@
                 <label for="nimi">Vali meeldivaim muusikastist:</label>
             </td>
             <td>
-                <input type="text" id="nimi" placeholder="Nimi" oninput="nimilugeminekastist()">
+                <input type="text" id="nimi" placeholder="Nimi"
+                       oninput="nimilugeminekastist()">
+                <div class="viga" id="viga5">Palun sisesta nimi!</div>
             </td>
-
-
             <td>
                 <div id="vastus1"></div>
             </td>
         </tr>
 
-
         <tr>
             <td>
-                <label>
-                    kuidas sa muusikat peamiselt kuulad?
-                </label>
+                <label>Kuidas sa muusikat peamiselt kuulad?</label>
             </td>
             <td>
                 <select name="stiil" id="stiil" onchange="selectValik()">
-                    <option value="vali">vali..</option >
+                    <option value="vali">vali..</option>
                     <option value="hiphop">hiphop</option>
                     <option value="kantri">kantri</option>
                     <option value="rock">rock</option>
                     <option value="metal">metal</option>
                 </select>
-
-
+                <div class="viga" id="viga6">Palun vali muusikastiil!</div>
+            </td>
             <td>
                 <div id="vastus5"></div>
-
-            <img id="stiiliPilt" src="" alt="" style="width: 50px; display: none;">
+                <img id="stiiliPilt" src="" alt=""
+                     style="width: 50px; display: none;">
             </td>
-
-
         </tr>
 
         <!-- radio nupud - üks valik mitmest -->
-
         <tr>
             <td>
                 <label>Platvorm:</label>
             </td>
             <td>
-                <input type="radio" name="platvorm" id="spotify" value="spotify" onclick="radioValik()">
+                <input type="radio" name="platvorm" id="spotify"
+                       value="spotify" onclick="radioValik()">
                 <label for="spotify">spotify</label>
                 <br>
 
-                <input type="radio" name="platvorm" id="raadio" value="raadio" onclick="radioValik()">
+                <input type="radio" name="platvorm" id="raadio"
+                       value="raadio" onclick="radioValik()">
                 <label for="raadio">raadio</label>
                 <br>
 
-                <input type="radio" name="platvorm" id="vinyl" value="vinüülplaat" onclick="radioValik()">
+                <input type="radio" name="platvorm" id="vinyl"
+                       value="vinüülplaat" onclick="radioValik()">
                 <label for="vinyl">vinüülplaat</label>
 
+                <div class="viga" id="viga4">Palun vali platvorm!</div>
+            </td>
             <td>
                 <div id="vastus2"></div>
             </td>
         </tr>
 
         <!-- checkbox -->
-
         <tr>
             <td>
                 <label>Lemmik ansambel:</label>
             </td>
             <td>
                 <fieldset>
-                    <legend>
-                        Tee oma valikud - lemmik ansambel
-                    </legend>
+                    <legend>Tee oma valikud - lemmik ansambel</legend>
 
-                    <input type="checkbox" name="lemmikud" id="rollingstones" value="rollingstones" onchange="checkboxValik()">
+                    <input type="checkbox" name="lemmikud"
+                           id="rollingstones" value="rollingstones"
+                           onchange="checkboxValik()">
                     <label for="rollingstones">Rolling stones</label>
                     <br>
 
-                    <input type="checkbox" name="lemmikud" id="systemofdown" value="system of down" onchange="checkboxValik()">
+                    <input type="checkbox" name="lemmikud"
+                           id="systemofdown" value="system of down"
+                           onchange="checkboxValik()">
                     <label for="systemofdown">System of Down</label>
                     <br>
 
-                    <input type="checkbox" name="lemmikud" id="metallica" value="metallica" onchange="checkboxValik()">
+                    <input type="checkbox" name="lemmikud"
+                           id="metallica" value="metallica"
+                           onchange="checkboxValik()">
                     <label for="metallica">metallica</label>
                 </fieldset>
+                <div class="viga" id="viga1">Vali vähemalt üks ansambel!</div>
             </td>
-
-
             <td>
                 <div id="vastus3"></div>
             </td>
         </tr>
 
         <!-- range - vahemik -->
-
         <tr>
             <td>
                 <label for="tund">
@@ -120,23 +126,24 @@
             </td>
             <td>
                 0
-                <input type="range" id="tund" min="0" max="24" onchange="rangeValik()">
+                <input type="range" id="tund" min="0" max="24"
+                       onchange="rangeValik()">
                 24
+                <div class="viga" id="viga3">Vali tundide arv!</div>
+            </td>
             <td>
                 <div id="vastus4"></div>
             </td>
-
-
         </tr>
 
         <!-- 5 uut input tüüpi -->
-
         <tr>
             <td>
                 <label for="email">Email:</label>
             </td>
             <td>
                 <input type="email" id="email" placeholder="Sinu email">
+                <div class="viga" id="viga7">Palun sisesta email!</div>
             </td>
         </tr>
 
@@ -146,6 +153,7 @@
             </td>
             <td>
                 <input type="number" id="number" min="0" max="100">
+                <div class="viga" id="viga8">Palun sisesta laulude arv!</div>
             </td>
         </tr>
 
@@ -155,6 +163,7 @@
             </td>
             <td>
                 <input type="date" id="date">
+                <div class="viga" id="viga9">Palun vali kuupäev!</div>
             </td>
         </tr>
 
@@ -173,70 +182,178 @@
             </td>
             <td>
                 <input type="password" id="password" placeholder="Parool">
+                <div class="viga" id="viga10">Palun sisesta parool!</div>
             </td>
-
-
         </tr>
 
         <tr>
             <td>
-                <label for="arvamus">Mida arvad muusika kuulamisest koolis</label>
+                <label for="arvamus">
+                    Mida arvad muusika kuulamisest koolis
+                </label>
             </td>
             <td>
-                <textarea name="arvamus" id="arvamus" cols="30" rows="10" oninput="arvamuslugemine()"></textarea>
+                <textarea name="arvamus" id="arvamus" cols="30" rows="10"
+                          oninput="arvamuslugemine()"></textarea>
+                <div class="viga" id="viga2">Palun kirjuta oma arvamus!</div>
             </td>
             <td>
                 <div id="vastus6"></div>
             </td>
-
-
+        </tr>
 
         <tr>
             <td>
                 <strong>Kas sa kuulad raadiot?</strong>
             </td>
             <td>
-                <input type="radio" name="raadioValik" id="jah" value="Jah" onclick="radioValik2()">
+                <input type="radio" name="raadioValik" id="jah"
+                       value="Jah" onclick="radioValik2()">
                 <label for="jah">Jah</label><br>
-                <input type="radio" name="raadioValik" id="ei" value="Ei" onclick="radioValik2()">
+
+                <input type="radio" name="raadioValik" id="ei"
+                       value="Ei" onclick="radioValik2()">
                 <label for="ei">Ei</label><br>
+
+                <div class="viga" id="viga11">Palun vali Jah või Ei!</div>
             </td>
             <td>
                 <div id="vastus7"></div>
             </td>
         </tr>
 
-
-
         <tr>
             <td>
-                <label for="raadiojaam">Milliseid raadiojaamu oskad nimetada?</label>
+                <label for="raadiojaam">
+                    Milliseid raadiojaamu oskad nimetada?
+                </label>
             </td>
             <td>
-                <input type="text" name="raadiojaam" id="raadiojaam" placeholder="shanson" oninput="raadiojaamLugemine()">
+                <input type="text" name="raadiojaam" id="raadiojaam"
+                       placeholder="shanson"
+                       oninput="raadiojaamLugemine()">
+                <div class="viga" id="viga12">Palun sisesta raadiojaam!</div>
             </td>
             <td>
                 <div id="vastus9"></div>
             </td>
         </tr>
 
-
         <tr>
             <td>
-                <input type="reset" value="Puhasta" onclick="puhasta()">
+                <input type="reset" value="Puhasta" id="puhasta"
+                       onclick="puhasta()">
             </td>
-
             <td>
-                <input type="button" value="Näita/Loe andmed" onclick="naitaKoike()">
+                <input type="submit" value="Näita/Loe andmed">
             </td>
-
             <td>
                 <div id="vastusKoik"></div>
             </td>
-
-
+        </tr>
     </table>
 </form>
+
+<script>
+    $(function(){
+        // peidame vead
+        $('.viga').hide();
+
+        // puhastusnupp
+        $('#puhasta').click(function(){
+            $('#muusikaVorm')[0].reset();
+            $('.viga').hide();
+        });
+
+        // valideerimine, kui vorm on saadetud
+        $('#muusikaVorm').submit(function(event){
+            let valid = true;
+
+            // 1. Checkbox
+            if($('input[name="lemmikud"]:checked').length === 0){
+                $('#viga1').show();
+                valid = false;
+            } else { $('#viga1').hide(); }
+
+            // 2. Textarea
+            if($('#arvamus').val().trim() === ""){
+                $('#viga2').show();
+                valid = false;
+            } else { $('#viga2').hide(); }
+
+            // 3. Number (0–24)
+            let tunnid = $('#tund').val();
+            if(tunnid === "" || isNaN(tunnid) || tunnid < 0 || tunnid > 24){
+                $('#viga3').show();
+                valid = false;
+            } else { $('#viga3').hide(); }
+
+            // 4. Radio
+            if($('input[name="platvorm"]:checked').length === 0){
+                $('#viga4').show();
+                valid = false;
+            } else { $('#viga4').hide(); }
+
+            // 5. Text (ainult tähed)
+            let tekst = $('#nimi').val().trim();
+            if(tekst === "" || !/^[a-zA-Z\s]+$/.test(tekst)){
+                $('#viga5').show();
+                valid = false;
+            } else { $('#viga5').hide(); }
+
+            // 6. Select
+            if($('#stiil').val() === "vali"){
+                $('#viga6').show();
+                valid = false;
+            } else { $('#viga6').hide(); }
+
+            // 7. Email
+            if($('#email').val().trim() === ""){
+                $('#viga7').show();
+                valid = false;
+            } else { $('#viga7').hide(); }
+
+            // 8. Number
+            if($('#number').val() === ""){
+                $('#viga8').show();
+                valid = false;
+            } else { $('#viga8').hide(); }
+
+            // 9. Date
+            if($('#date').val() === ""){
+                $('#viga9').show();
+                valid = false;
+            } else { $('#viga9').hide(); }
+
+            // 10. Password
+            if($('#password').val().trim() === ""){
+                $('#viga10').show();
+                valid = false;
+            } else { $('#viga10').hide(); }
+
+            // 11. Radio
+            if($('input[name="raadioValik"]:checked').length === 0){
+                $('#viga11').show();
+                valid = false;
+            } else { $('#viga11').hide(); }
+
+            // 12. Text
+            if($('#raadiojaam').val().trim() === ""){
+                $('#viga12').show();
+                valid = false;
+            } else { $('#viga12').hide(); }
+
+            // kui on vead, siis ei ole vaja vormi saada
+            if(!valid){
+                event.preventDefault();
+            } else {
+                event.preventDefault();
+                alert("Vorm on edukalt saadetud!");
+                naitaKoike();
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

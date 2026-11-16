@@ -6,6 +6,11 @@ body {
     color: #2c3e50;
 }
 
+.viga {
+    color: red;
+}
+
+
 h1 {
     font-size: x-large;
     font-variant: small-caps;
