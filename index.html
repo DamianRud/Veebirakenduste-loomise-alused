@@ -56,6 +56,26 @@
             $('#vastus').html('x:' + koht.left + ' //// y:' + koht.top);
         }
 
+
+
+        /* vihjemull 4 Osa */
+        $(function() {
+            $('.vihjemull').mouseover(function(e) {
+                var mull = $(this).attr('title');
+                $(this).attr('title','');
+                $(this).append('<div id="vihje">' + mull + '</div>');
+
+                $('#vihje').fadeIn('500');
+                $('#vihje').fadeTo('10',0.9);
+            }).mousemove(function(e) {
+                $('#vihje').css('top', e.pageY + 10);
+                $('#vihje').css('left', e.pageX + 20);
+            }).mouseout(function() {
+                $(this).attr('title',$('#vihje').html());
+                $(this).children('div#vihje').remove();
+            });
+        });
+
         start();
     });
 </script>
@@ -65,25 +85,27 @@
     <h1>Damian veebirakenduste alusi</h1>
 </header>
 
+
 <nav>
     <ul>
         <li>
-            <a href="index.html">Kodu</a>
+            <a href="index.html" class="vihjemull" title="Mine avalehele">Kodu</a>
         </li>
         <li>
-            <a href="tutvustus.html">Tutvustus</a>
+            <a href="tutvustus.html" class="vihjemull" title="Siit leiad infot minu kohta">Tutvustus</a>
         </li>
         <li>
-            <a href="lingid.html">Kasulikud lingid</a>
+            <a href="lingid.html" class="vihjemull" title="Siit leiad kasulikke veebilehti">Kasulikud lingid</a>
         </li>
         <li>
-            <a href="tood.html">Tehtud tööd</a>
+            <a href="tood.html" class="vihjemull" title="Siit näed minu tehtud töid">Tehtud tööd</a>
         </li>
         <li>
-            <a href="meedia.html">Media</a>
+            <a href="meedia.html" class="vihjemull" title="	Siit leiad pilte ja videoid">Media</a>
         </li>
     </ul>
 </nav>
+
 
 <!--põhisisu-->
 <main>
