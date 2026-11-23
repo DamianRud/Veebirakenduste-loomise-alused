@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><!--deklareerime HTML5 keel-->
 <html lang="et">
 <head>
@@ -5,16 +6,18 @@
     <meta charset="UTF-8">
     <title>Damian veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <!--veebilehe sisu-->
 <header>
     <h1>Damian veebirakenduste alusi</h1>
 </header>
+
 <nav>
     <ul>
         <li>
-            <a href="tood/index.html">Kodu</a>
+            <a href="index.html">Kodu</a>
         </li>
         <li>
             <a href="tutvustus.html">Tutvustus</a>
@@ -24,8 +27,17 @@
         </li>
         <li>
             <a href="tood.html">Tehtud tööd</a>
+            <ul>
+                <li><a href="tood/maparia.html">Map area</a></li>
+                <li><a href="tood/taabelid.html">Tabelid</a></li>
+                <li><a href="tood/vormid/kysimustik.html">Muusika ankeet HTML vormid</a></li>
+                <li><a href="tood/paberileUlesane.html">paberiulesane</a></li>
+                <li><a href="tood/vormid/piltiteevahetus.html">Piltide vahetus</a></li>
+                <li><a href="tood/kysimustikUlesane/kysimustik2.html">Küsimustik 2</a></li>
+                <li><a href="JS_Objektid_ja_meetodid/index.html">JS Objektid 2</a></li>
+                <li><a href="joonis/canvasjoonistamine.html">Joonis</a></li>
+            </ul>
         </li>
-
     </ul>
 </nav>
 
@@ -60,7 +72,6 @@
             <a href="joonis/canvasjoonistamine.html">Joonis</a>
         </p>
     </section>
-
 </main>
 
 <!--jalus-->
@@ -68,6 +79,16 @@
     Damian leht &copy;2026
 </footer>
 
+<script type="text/javascript">
+    $(function(){
+        $('nav a').hover(function(event){
+                $(this).addClass('hover');
+            },
+            function(){
+                $(this).removeClass('hover');
+            });
+    });
+</script>
 
 </body>
 </html>
